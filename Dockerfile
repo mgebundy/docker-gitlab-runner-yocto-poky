@@ -25,11 +25,6 @@ RUN apt update \
   iputils-ping \
   libsdl1.2-dev \
   xterm \
-  locales \
-  texi2html \
-  makeinfo \
-  svn \
-  patch \
 	&& rm -rf /var/lib/apt/lists/*
 
 # Fix error "Please use a locale setting which supports utf-8."
