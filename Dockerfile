@@ -38,4 +38,11 @@ ENV LANG en_US.UTF-8
 ENV LANGUAGE en_US:en
 ENV LC_ALL en_US.UTF-8
 
-RUN git clone -b pyro git://git.yoctoproject.org/poky /poky
+# Create a non-root user that will perform the actual build
+RUN id build 2>/dev/null || useradd --uid 30000 --create-home build
+RUN echo "build ALL=(ALL) NOPASSWD: ALL" | tee -a /etc/sudoers
+
+USER build
+WORKDIR /home/build
+
+RUN git clone -b pyro git://git.yoctoproject.org/poky
