@@ -1,10 +1,10 @@
-FROM ubuntu:14.04
+FROM ubuntu:12.04
 
 MAINTAINER Mitchell Bundy <mitch@bundy.ca>
 
-RUN apt update \
-  && apt upgrade -y \
-	&& apt install -y --no-install-recommends \
+RUN apt-get update \
+  && apt-get upgrade -y \
+	&& apt-get install -y --no-install-recommends \
   gawk \
   wget \
   git \
