@@ -25,6 +25,7 @@ RUN apt update \
   iputils-ping \
   libsdl1.2-dev \
   xterm \
+  locales \
   openssh-client \
 	&& rm -rf /var/lib/apt/lists/*
 
