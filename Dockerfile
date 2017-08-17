@@ -25,6 +25,7 @@ RUN apt update \
   iputils-ping \
   libsdl1.2-dev \
   xterm \
+  openssh-client \
 	&& rm -rf /var/lib/apt/lists/*
 
 # Fix error "Please use a locale setting which supports utf-8."
